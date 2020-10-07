@@ -1,0 +1,8 @@
+103,Apple,Bee,15,M
+106,Big,Lumpus,15,F
+105,Elegant,Chair,15,M
+104,Fiery,Lemon,15,F
+101,Fiery,Rock,14,M
+111,Golden,Peak,16,M
+107,Misty,Hills,15,M
+105,Nightly,Fox,15,M

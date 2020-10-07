@@ -1,3 +1,4 @@
+"""created oct 7, sent by AG"""
 class ConsoleProgram:
     def __init__(self):
         self.acc_number = ""

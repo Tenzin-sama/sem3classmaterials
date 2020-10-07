@@ -1,14 +1,14 @@
 class signup:
 
     def reg(self, name, username, password):
-        file=open('regi.txt','a')
+        file=open('oct6CWregi.txt', 'a')
         data=name+','+username+','+password+'\n'
         file.write(data)
         file.close()
 
     def display(self):
         reginfo=[]
-        file=open('regi.txt','r')
+        file=open('oct6CWregi.txt', 'r')
         data=file.readlines()
         file.close()
 

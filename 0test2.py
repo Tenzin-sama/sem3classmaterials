@@ -1,7 +1,7 @@
 savedRec = []  # list of current saved data
 nameList = []  # list of all first names in txt file, to be sorted in ascending order
 sortedRec = []  # list for new sorted data
-file = open('testCus.txt', 'r')
+file = open('0testfile.txt', 'r')
 data = file.readlines()
 file.close()
 
@@ -19,7 +19,7 @@ print(nameList)
 print(len(savedRec))
 for i in range(len(savedRec)):
     print(i)
-file = open('testCus.txt', 'w')
+file = open('0testfile.txt', 'w')
 
 n = 0
 fileIndex = 0

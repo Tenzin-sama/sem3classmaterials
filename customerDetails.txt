@@ -1,4 +1,0 @@
-101,Apple,Bee,14,m
-102,Biggus,Romus,15,m
-103,Foolist,Tomist,15,f
-104,Diamon,Peal,15,f

@@ -1,7 +1,7 @@
 """
 Tenzin Tsering Shrestha, 27C
-register a customer with atleast 5 data fields,
-loop continuously unless user exits,
+reg of a customer with atleast 5 fields,
+loop unless user exits,
 user chooses one of the options:
 register - data to be saved in file,
 search - search using acc number
@@ -15,7 +15,6 @@ class Customer:
         pass
 
     def main(self):
-        """ main method that runs on a continuous loop"""
         print("\nWelcome to the program")
         while True:
             print("\nChoose one of the following options:")
@@ -30,31 +29,30 @@ class Customer:
             elif resp == 'e':
                 break
             elif resp == 'q':
-                self.fileCommand('sort')  # for testing sort feature with registering
+                self.fileCommand('sort')  # for testing sort feature
             else:
                 print("Incorrect input")
 
     def registerNew(self):
-        """ registration of new customer"""
         print("\nEnter new customer details")
-        accNum = input('Account number: ').capitalize()
-        firstName = input('First name: ').capitalize()  # to remove problems while sorting
-        lastName = input('Last name: ').capitalize()
-        age = input('Age: ').capitalize()
-        gender = input('Gender: ').capitalize()
+        accNum = input('Account number: ')
+        firstName = input('First name: ')
+        lastName = input('Last name: ')
+        age = input('Age: ')
+        gender = input('Gender: ')
 
-        file = open('customerData.txt', 'a')
+        # file = open('oct6HWcustomerData.txt', 'a')
         data = accNum + ',' + firstName + ',' + lastName + ',' + age + ',' + gender + '\n'
-        print("Input:", data)
-        file.write(data)
-        file.close()
-        if self.fileCommand('sort'):  # to sort the data in customerData.txt after every new record
+        print(data)
+        # file.write(data)
+        # file.close()
+        if self.fileCommand('sort', data):  # to sort the data in oct6HWcustomerData.txt after every new record
             input("Record saved, press Enter to continue.")
 
     def searchRec(self):
-        """ search for records using first name or accout number"""
+        """ search for records using account number"""
         record = self.fileCommand('search')
-        if record is not None:
+        if record != None:
             print(f"\nFound {len(record)} record(s):\nAccNum, Fname, Lname, Age, Gender")
             for i in record:
                 print(i)
@@ -68,40 +66,45 @@ class Customer:
         for i in range(len(records)):
             print(records[i])  # print all line by line
 
-    def fileCommand(self, state):
-        """ sorts the current data in customerData.txt accordint to ascending order of first names"""
-        savedRec = []  # list of current saved data in txt file
+    def fileCommand(self, state, newdata=None):
+        """ sorts the current data in oct6HWcustomerData.txt accordint to ascending order of first names"""
+        savedRec = []  # list of current saved data
         nameList = []  # list of all first names in txt file, to be sorted in ascending order
         sortedRec = []  # list for new sorted data
-        file = open('customerData.txt', 'r')
+        file = open('oct6HWcustomerData.txt', 'r')
         data = file.readlines()
+        print(data)
+        print(newdata)
+        print("")
         file.close()
 
         for i in data:
             replacedata = i.replace('\n', '')
             medata = replacedata.split(',')
             savedRec.append(medata)
+        print("\n", savedRec)
+        if newdata != None:
+            savedRec.append(newdata)
+            print(savedRec, "\n")
 
         if state == 'sort':
+            print("It workes!")
             for i in range(len(savedRec)):  # to sort names in ascending order
                 temp = str(savedRec[i][1])
                 nameList.append(temp)
             nameList.sort()  # the nameList has been sorted in ascending order
             nameList = list(dict.fromkeys(nameList))  # to remove duplicate values in fnames
 
-            file = open('customerData.txt', 'w')
-            n = 0
-            fileIndex = 0
-            for curName in nameList:
-                for i in range(len(savedRec)):
-                    if curName == savedRec[i][1]:  # if current name in namelist matches name in savedRec
-                        templine = savedRec[i][0] + ',' + savedRec[i][1]
-                        templine = templine + ',' + savedRec[i][2] + ',' + savedRec[i][3]
-                        templine = templine + ',' + savedRec[i][4] + '\n'
+            file = open('oct6HWcustomerData.txt', 'w')
+            for i in range(len(nameList)):  # to sort the current saved records
+                print("NEW", i)
+                for j in range(len(savedRec)):
+                    if nameList[i] == savedRec[j][1]:  # if current name in namelist matches name in savedRec
+                        templine = savedRec[j][0] + ',' + savedRec[j][1] + ',' + savedRec[j][2] + ',' + savedRec[j][3] + ',' + savedRec[j][4] + '\n'
                         sortedRec.append(templine)
-                        file.write(sortedRec[fileIndex])  # write the current line onto txt file
-                        fileIndex += 1
-                n += 1
+                        file.write(sortedRec[i])  # write the current line onto txt file
+                        print("log:", savedRec[j])
+                        print("log:", sortedRec[i],"\n")
             file.close()
             return True
 
@@ -120,7 +123,7 @@ class Customer:
                 flow = True
 
             if flow:
-                searchFactor = input(f"Enter the {searchType} to search for:\n>>").capitalize()
+                searchFactor = input(f"Enter the {searchType} to search for:\n>>")
                 for j in range(len(savedRec)):
                     if searchFactor == savedRec[j][pos]:  # if current name in namelist matches name in savedRec
                         foundVal.append(savedRec[j])

@@ -13,6 +13,7 @@ class signup:
 
 signup()
 """
+HW:
 reg of a customer with 5 field.
 Until customer stop
 data to be saved in file

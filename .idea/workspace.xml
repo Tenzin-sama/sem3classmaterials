@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d7d67ea0-67f6-4428-be8b-d27aa1b5e057" name="Default Changelist" comment="" />
+    <list default="true" id="d7d67ea0-67f6-4428-be8b-d27aa1b5e057" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/oct1to15/oct8CW1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/oct1to15/oct8CW1b.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,63 +19,27 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1iV5mr60x0cwmMz6uaC2IbnmNa1" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Google Drive\Python Files\sem3pyCl\oct1to15" />
       <recent name="D:\Google Drive\Python Files\sem3pyCl\tempo" />
       <recent name="D:\Google Drive\Python Files\sem3pyCl" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.console_program (1)">
-    <configuration name="0test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="sem3pyCl" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="D:\Google Drive\Python Files\sem3pyCl\0test.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="0test2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="sem3pyCl" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="D:\Google Drive\Python Files\sem3pyCl\0test2.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.oct8CW1b (1)">
     <configuration name="console_program (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="sem3pyCl" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -84,27 +53,6 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tempo/console_program.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="console_program" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="sem3pyCl" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="D:\Google Drive\Python Files\sem3pyCl\tempo\console_program.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -134,13 +82,76 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="oct8CW1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="sem3pyCl" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/oct1to15" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/oct1to15/oct8CW1.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="oct8CW1b (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="sem3pyCl" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/oct1to15" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/oct1to15/oct8CW1b.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="oct8CW1b" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="sem3pyCl" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="D:\Google Drive\Python Files\sem3pyCl\oct1to15\oct8CW1b.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.oct8CW1" />
+        <item itemvalue="Python.oct8CW1b (1)" />
+        <item itemvalue="Python.oct8CW1b" />
         <item itemvalue="Python.console_program (1)" />
         <item itemvalue="Python.oct6HW" />
-        <item itemvalue="Python.0test2" />
-        <item itemvalue="Python.0test" />
-        <item itemvalue="Python.console_program" />
       </list>
     </recent_temporary>
   </component>
@@ -156,21 +167,25 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state width="407" height="639" key="GridCell.Tab.0.bottom" timestamp="1602077930474">
+    <state width="442" height="639" key="GridCell.Tab.0.bottom" timestamp="1602132227559">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="407" height="639" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1602077930474" />
-    <state width="407" height="639" key="GridCell.Tab.0.center" timestamp="1602077930473">
+    <state width="442" height="639" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1602132227559" />
+    <state width="442" height="639" key="GridCell.Tab.0.center" timestamp="1602132227559">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="407" height="639" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1602077930473" />
-    <state width="407" height="639" key="GridCell.Tab.0.left" timestamp="1602077930473">
+    <state width="442" height="639" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1602132227559" />
+    <state width="442" height="639" key="GridCell.Tab.0.left" timestamp="1602132227559">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="407" height="639" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1602077930473" />
-    <state width="407" height="639" key="GridCell.Tab.0.right" timestamp="1602077930474">
+    <state width="442" height="639" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1602132227559" />
+    <state width="442" height="639" key="GridCell.Tab.0.right" timestamp="1602132227559">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="407" height="639" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1602077930474" />
+    <state width="442" height="639" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1602132227559" />
+    <state x="676" y="0" width="697" height="775" key="dock-window-1" timestamp="1602127254582">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="676" y="0" width="697" height="775" key="dock-window-1/0.0.1366.768@0.0.1366.768" timestamp="1602127254582" />
   </component>
 </project>

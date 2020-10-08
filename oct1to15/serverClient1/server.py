@@ -7,18 +7,15 @@ server_socket.listen()  # continuously listens to requests on binded (address,po
 print("Waiting for connection...")
 connection_socket, address = server_socket.accept()  # if a request is found, the request is accepted. Returns
 print("connection Established with",address)
-# print(connection_socket)
-# print("")
-# print(address)
-server_message = "Sever: Thank you for sending the request."
-data = server_message.encode()
-connection_socket.send(data)
-"""
-HW:
-establish two-way communication,
-meaning client can send data to server as well
-"""
 
 client_message = connection_socket.recv(1024)
 client_message = client_message.decode()
 print(client_message)
+
+while True:
+    server_message = "Server:" + input(">>")
+    data = server_message.encode()
+    connection_socket.send(data)
+    if server_message == 'Server:x':
+        print("[You have disconnected]")
+        break

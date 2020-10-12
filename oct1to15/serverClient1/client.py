@@ -36,6 +36,7 @@ class ServerSide:
             client_message = "Client: " + input()
             if client_message == "Client: x":
                 print("[You have disconnected]")
+                print("...please wait...\n")
                 runstate = False
             client_data = client_message.encode()
             conn.send(client_data)

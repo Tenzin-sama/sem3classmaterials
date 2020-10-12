@@ -34,7 +34,7 @@ class ServerSide:
     def sendData(self):
         global conn, runstate
         while runstate:
-            server_message = "Server: " + input("You: ")
+            server_message = "Server: " + input()
             if server_message == 'Server: x':
                 print("[You have disconnected]")
                 runstate = False

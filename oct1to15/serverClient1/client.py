@@ -6,7 +6,10 @@ from threading import *
 class ServerSide:
 
     def __init__(self):
-        global conn
+        global conn, runstate
+
+        runstate = True
+
         conn = socket.socket(socket.AF_INET, socket.SOCK_STREAM)  # (internet ver 4, socket TCP/IP)
         conn.connect(('192.168.1.2', 8081))  # ((IP address, post))
         print("Connection Established\n")
@@ -25,24 +28,25 @@ class ServerSide:
         threadSend.join()
 
     def sendData(self):
-        global conn
-        while True:
-            client_message = "Client: " + input()
+        global conn, runstate
+        while runstate:
+            client_message = "Client: " + input("You: ")
             if client_message == "Client: x":
                 print("[You have disconnected]")
-                break
+                runstate = False
             client_data = client_message.encode()
             conn.send(client_data)
 
     def receiveData(self):
-        global conn
-        while True:
+        global conn, runstate
+        while runstate:
             server_data = conn.recv(1024)
             server_message = server_data.decode()
             if server_message == "Server: x":
                 print("[Server has disconnected]")
-                break
-            print(server_message)
+                runstate = False
+            if runstate:
+                print(server_message)
 
 
 ServerSide()

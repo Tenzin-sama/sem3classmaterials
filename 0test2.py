@@ -1,34 +1,44 @@
-savedRec = []  # list of current saved data
-nameList = []  # list of all first names in txt file, to be sorted in ascending order
-sortedRec = []  # list for new sorted data
-file = open('0testfile.txt', 'r')
-data = file.readlines()
-file.close()
+"""for client side"""
+import socket
+from threading import *
 
-for i in data:
-    replacedata = i.replace('\n', '')
-    medata = replacedata.split(',')
-    savedRec.append(medata)
+class ServerSide:
+    global conn
+    def __init__(self):
+        conn = socket.socket(socket.AF_INET, socket.SOCK_STREAM)  # (internet ver 4, socket TCP/IP)
+        conn.connect(('192.168.1.2', 8081))  # ((IP address, post))
+        print("Connection Established\n")
 
-for i in range(len(savedRec)):  # to sort names in ascending order
-    temp = str(savedRec[i][1])
-    nameList.append(temp)
-nameList.sort()  # the nameList has been sorted in ascending order
-nameList = list(dict.fromkeys(nameList))  # to remove duplicate values in fnames
-print(nameList)
-print(len(savedRec))
-for i in range(len(savedRec)):
-    print(i)
-file = open('0testfile.txt', 'w')
+        server_message = "<You have connected with Server>\n"
+        data = server_message.encode()
+        conn.send(data)
 
-n = 0
-fileIndex = 0
-for curName in nameList:
-    for i in range(len(savedRec)):
-        if curName == savedRec[i][1]:  # if current name in namelist matches name in savedRec
-            templine = savedRec[i][0] + ',' + savedRec[i][1] + ',' + savedRec[i][2] + ',' + savedRec[i][3] + ',' + savedRec[i][4] + '\n'
-            sortedRec.append(templine)
-            file.write(sortedRec[fileIndex])  # write the current line onto txt file
-            fileIndex += 1
-    n += 1
-file.close()
+        threadReceive = Thread(target=self.receiveData)
+        threadSend = Thread(target=self.sendData)
+
+        threadReceive.start()
+        threadSend.start()
+
+        threadReceive.join()
+        threadSend.join()
+
+
+    def sendData(self):
+        while True:
+            client_message = "Client: " + input()
+            if client_message == "Client: x":
+                print("[You have disconnected]")
+                break
+            client_data = client_message.encode()
+            conn.send(client_data)
+
+    def receiveData(self, conn):
+        while True:
+            server_data = conn.recv(1024)
+            server_message = server_data.decode()
+            if server_message == "Server: x":
+                print("[Server has disconnected]")
+                break
+            print(server_message)
+
+ServerSide()

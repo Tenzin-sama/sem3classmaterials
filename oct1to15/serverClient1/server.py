@@ -1,21 +1,51 @@
 """for server side"""
 import socket
+from threading import *
 
-server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)  # (internet ver 4, socket TCP/IP)
-server_socket.bind(('0.0.0.0', 8081))  # ((IP address, post))
-server_socket.listen()  # continuously listens to requests on binded (address,port)
-print("Waiting for connection...")
-connection_socket, address = server_socket.accept()  # if a request is found, the request is accepted. Returns
-print("connection Established with",address)
 
-client_message = connection_socket.recv(1024)
-client_message = client_message.decode()
-print(client_message)
+class ServerSide:
 
-while True:
-    server_message = "Server:" + input(">>")
-    data = server_message.encode()
-    connection_socket.send(data)
-    if server_message == 'Server:x':
-        print("[You have disconnected]")
-        break
+    def __init__(self):
+        global conn
+        server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        server_socket.bind(('192.168.1.2', 8081))  # ((IP address, post))
+        server_socket.listen()  # continuously listens to requests on binded (address,port)
+        print("Waiting for connection...")
+        conn, address = server_socket.accept()
+        print("Connection Established with", address, "\n")
+
+        server_message = "<You have connected with Server>\n"
+        data = server_message.encode()
+        conn.send(data)
+
+        threadReceive = Thread(target=self.receiveData)
+        threadSend = Thread(target=self.sendData)
+
+        threadReceive.start()
+        threadSend.start()
+
+        threadReceive.join()
+        threadSend.join()
+
+    def sendData(self):
+        global conn
+        while True:
+            server_message = "Server: " + input()
+            if server_message == 'Server: x':
+                print("[You have disconnected]")
+                break
+            server_data = server_message.encode()
+            conn.send(server_data)
+
+    def receiveData(self):
+        global conn
+        while True:
+            client_data = conn.recv(1024)
+            client_message = client_data.decode()
+            if client_message == "Client: x":
+                print("[Client has disconnected]")
+                break
+            print(client_message)
+
+
+ServerSide()

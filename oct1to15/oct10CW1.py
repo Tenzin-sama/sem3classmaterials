@@ -21,9 +21,10 @@ class B(Thread):
 
 oa = A()
 ob = B()
-oa.start()
-sleep(0.5)
+oa.start()  # starts the function defined in oa thread
+sleep(0.5)  # sleep pauses the program for (x) seconds (0.5 seconds here)
 ob.start()
-oa.join()
+oa.join()  # closes the oa thread after it is completed
 ob.join()
+# current_thread().getname() returns the name of the thread this code is in
 print("BYE", current_thread().getName())

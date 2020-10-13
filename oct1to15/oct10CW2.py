@@ -19,12 +19,12 @@ class B:
 
 oa = A()
 ob = B()
-t1 = Thread(target=oa.hello)
-t2 = Thread(target=ob.hi)
-t1.start()
-sleep(0.5)
-t2.start()
-t1.join()
+t1 = Thread(target=oa.hello)  # creating a new thread
+t2 = Thread(target=ob.hi)  # creating another thread
+t1.start() # starts the function defined in t1 thread
+sleep(0.5)  # pauses here for 0.5 seconds
+t2.start()  # starts t2 thread
+t1.join()  # deletes the thread after the function within has completed
 t2.join()
 
 print("BYE", current_thread().getName())

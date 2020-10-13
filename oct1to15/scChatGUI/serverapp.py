@@ -1,41 +1,38 @@
 """for server side"""
 import socket
 from threading import *
+import tkinter
 from tkinter import *
 
 
 class ServerGUI:
 
-    def __init__(self):
-
+    def __init__(self, win):
         global conn, runstate  # shared variable across all modules
 
-        server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        server_socket.bind(('192.168.1.2', 8081))  # ((IP address, post))
-        server_socket.listen()  # continuously listens to requests on binded (address,port)
-        print("Waiting for connection...")
-        conn, address = server_socket.accept()
-        # print("Connection Established with", address, "\n")  # after a client connects
+        self.win = win
+        self.win.title("GUI Chat")
+        # Display Size
+        sw = win.winfo_screenwidth()
+        sh = win.winfo_screenheight()
+        # Window Size and Position
+        ww, wh = 600, 450
+        wp, hp = (sw / 2) - (ww / 2), (sh / 2) - (wh / 2)
+        self.win.geometry("{}x{}+{}+{}".format(round(ww), round(wh), round(wp), round(hp)))
+        # Elements
 
-        runstate = True  # to dictate whether to continue running or stop
+    def createChat(self, chatHeadname):
+        pass
+        # Button
+        self.chatHead = Button(self.win, text=chatHeadname, command=self.gotoChatHead)
+        # Label
+        self.chatDisplay = Label(self.win)
+        # Entry
+        self.sendMessage = Entry(self.win)
 
-        server_message = "<You have connected with Server>\n"
-        data = server_message.encode()
-        conn.send(data)
+    def gotoChatHead(self):
+        pass
 
-        # using threads to run both receive and send in parallel
-        threadReceive = Thread(target=self.receiveData)
-        threadSend = Thread(target=self.sendData)
-
-        threadReceive.start()
-        threadSend.start()
-
-        # when the threaded functions have stopped
-        threadReceive.join()
-        input("Log: Receive has stopped. Press enter twice to end the program\n")
-        threadSend.join()
-        print("Log: Send has stopped. Program has ended")
-        server_socket.close()
 
     def sendData(self):
         """funtion to send data to client"""
@@ -62,4 +59,12 @@ class ServerGUI:
                 print(client_message)
 
 
-ServerGUI()
+def main():
+    """create the window"""
+    win = Tk()
+    ServerGUI(win)
+    win.mainloop()
+
+
+if __name__ == "__main__":
+    main()

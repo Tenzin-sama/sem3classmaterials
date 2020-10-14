@@ -1,5 +1,5 @@
 """
-Tenzin Tsering Shrestha, 27C
+Tenzin Tsering Shrestha, 27C CS19B
 register a customer with atleast 5 data fields,
 loop continuously unless user exits,
 user chooses one of the options:
@@ -69,7 +69,7 @@ class Customer:
             print(records[i])  # print all line by line
 
     def fileCommand(self, state):
-        """ sorts the current data in oct6HWcustomerData.txt accordint to ascending order of first names"""
+        """ sorts the current data in oct6HWcustomerData.txt according to ascending order of first names"""
         savedRec = []  # list of current saved data in txt file
         nameList = []  # list of all first names in txt file, to be sorted in ascending order
         sortedRec = []  # list for new sorted data

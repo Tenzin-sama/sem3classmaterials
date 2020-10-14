@@ -22,3 +22,6 @@ meaning client can send data to server as well
 client_message = connection_socket.recv(1024)
 client_message = client_message.decode()
 print(client_message)
+
+input()
+"""Abandoned: Refer to 'serverClient1' folder for actual work on this assignment"""

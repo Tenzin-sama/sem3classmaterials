@@ -1,4 +1,4 @@
-"""for server side"""
+"""for server side. Part of serverClient1. Tenzin, CS19B"""
 import socket
 from threading import *
 
@@ -9,7 +9,7 @@ class ServerSide:
         global conn, runstate  # shared variable across all modules
 
         server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        server_socket.bind(('192.168.1.2', 8081))  # ((IP address, post))
+        server_socket.bind(('127.0.0.1', 8081))  # ((IP address, post))
         server_socket.listen()  # continuously listens to requests on binded (address,port)
         print("Waiting for connection...")
         conn, address = server_socket.accept()

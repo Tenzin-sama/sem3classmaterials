@@ -1,9 +1,9 @@
-"""for client side"""
+"""for client side. Part of serverClient1. Tenzin, CS19B"""
 import socket
 from threading import *
 
 
-class ServerSide:
+class ClientSide:
 
     def __init__(self):
         global conn, runstate  # shared variable across all modules
@@ -11,7 +11,7 @@ class ServerSide:
         runstate = True  # variable to dictate if loop is to keep running or stop
 
         conn = socket.socket(socket.AF_INET, socket.SOCK_STREAM)  # (internet ver 4, socket TCP/IP)
-        conn.connect(('192.168.1.2', 8081))  # ((IP address, post))
+        conn.connect(('127.0.0.1', 8081))  # ((IP address, post))
         print("Connection Established\n")  # if connected to server
 
         server_message = "<A Client has connected>\n"
@@ -54,4 +54,4 @@ class ServerSide:
                 print(server_message)
 
 
-ServerSide()
+ClientSide()

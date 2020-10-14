@@ -13,3 +13,5 @@ print(message)
 client_message = "Client: Hello!"
 data = client_message.encode()
 client_socket.send(data)
+
+input()

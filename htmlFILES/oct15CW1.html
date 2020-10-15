@@ -1,0 +1,46 @@
+<!-- Oct 15 Lists -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lists in HTML</title>
+</head>
+<body>
+    <H1>Lists in HTML</H1>
+    <!--
+    1. Unordered Lists <ul>
+    2. Ordered Lists <ol>
+    3. Definition Lists <dl> <dt>(title) <dd>(description)
+    -->
+    <ul type="square">
+        <li>Apple
+            <ul> <!--Sublist with another list. Nested List -->
+                <li>Red
+                    <ul type="round">
+                        <li>Looks fresh</li>
+                        <li>Red apples are tasty</li>
+                    </ul>
+                </li>
+                <li>Tasty</li>
+            </ul>
+        </li>
+        <li>Ball
+            <ol><!--Nested lists can be of same type or different. Both <ol> and <ul> are permitted -->
+                <li>Round</li>
+                <li>Fun</li>
+            </ol>
+        </li>
+    </ul>
+    <ol type="a">
+        <li>Science</li>
+        <li>Maths</li>
+    </ol>
+    <dl>
+        <dt>HTML</dt>
+        <dd>A tag based language used to make webpages</dd>
+    </dl>
+    <!--Anchor tag is used to link webpages -->
+    <a href="https://github.com/Tenzin-sama?tab=repositories">Github page</a>
+    <marquee behaviour="alternate" direction="right" scrollamount=50>This text is sliding wooooooooo</marquee>
+</body>
+</html>

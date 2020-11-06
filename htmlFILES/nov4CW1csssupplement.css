@@ -1,0 +1,40 @@
+h1{
+    color: purple;
+    font-size: 50;
+    font-family: Calibri;
+    text-decoration: underline;
+    text-emphasis: outline;
+    text-align: center;
+    text-shadow: #4e85fc 2px 2px 8px;
+}
+p{
+    color: rgb(167, 15, 129);
+    font-size: 15px;
+    text-align: justify;
+    text-indent: 50px;
+    text-transform: capitalize;
+    word-spacing: 5px;
+    line-height: 30px;
+}
+
+.test{
+    color: blue;
+    font-size: 15px;
+    text-align: justify;
+    text-indent: 50px;
+    text-transform: capitalize;
+    word-spacing: 3px;
+    line-height: 30px;
+}
+
+#standard_text{
+    font-size: 20px;
+    color: rgb(161, 23, 23);
+    word-spacing: 3px;
+    line-height: 25px;
+    text-transform: none;
+}
+
+a{
+    color: rgb(150, 97, 0);
+}

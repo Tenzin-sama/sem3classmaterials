@@ -1,0 +1,70 @@
+.standardtable{
+    font-family: 'Times New';
+    text-align: left;
+    background-color: white;
+    border-color: black;
+}
+
+.white{
+    background-color: white;
+    color: black;
+
+}
+.red{
+    background-color: red;
+    color: white;
+}
+
+.yellow{
+    background-color: yellow;
+    color: black;
+}
+
+.green{
+    background-color: green;
+    color: white;
+}
+
+.cyan{
+    background-color: cyan;
+    color: black;
+}
+
+.purple{
+    background-color: purple;
+    color: white;
+}
+
+#head{
+    font-size:18px;
+    text-align: center;
+    font-weight: bold;
+}
+
+#xxsmall{
+    font-size: 8px;
+}
+
+#xsmall{
+    font-size: 11px;
+}
+
+#small{
+    font-size: 13px;
+}
+
+#medium{
+    font-size: 16px;
+}
+
+#large{
+    font-size: 18px;
+}
+
+#xlarge{
+    font-size: 24px;
+}
+
+#xxlarge{
+    font-size: 30px;
+}

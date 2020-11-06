@@ -5,4 +5,4 @@
 102,Golden,Plains,15,m
 107,Misty,Hills,15,m
 105,Nightly,Fox,15,m
-101,Silver,Bell,14,f
+101,Silver,Bell,14,fryuuzin,t102,teasdpass

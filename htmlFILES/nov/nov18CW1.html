@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integrating Media</title>
+    <style>
+        body{
+            font-family: Verdana,sans-serif;
+            background-color:rgb(193, 118, 255);
+        }
+        div{
+            border: 2px solid rgb(88, 0, 146);
+            border-radius: 8px;
+            background-color:rgb(255, 206, 253);
+            padding: 5px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div>
+        <!-- Images -->
+        <h3>Images:</h3>
+        <figure>
+            <img src="pic/cat2.gif" alt="an animated gif of a cat with a laptop" style="width:720px;height:720px">
+            <img src="pic/meteorShower2.gif" alt="an animated gif of a cat with a laptop" style="width:500px;height:720px">
+        </figure>
+    </div>
+    <div>   
+        <!-- Audio-->  
+        <h3>Audio:</h3>
+        <img src="pic/kannaPiano.gif" alt="an animated gif of a cello" style="width:500px;height:361px"><br>
+        <audio controls autoplay loop>
+            <!-- listing multiple file types in sources lets the browser choose the first supported type  -->
+            <source src="sound/piano.mp3" type="audio/mp3">
+            <source src="sound/piano.wav" type="audio/wav">
+        </audio>
+    </div>
+    <div>
+        <!-- Video -->
+        <h3>Video:</h3>
+        <video controls>
+            <source src="vid/shelterPiano.lnk" type="video/mp4">
+        </video>
+        <!--currently embeded video does not work on firefox. Works for Edge-->
+        <h3>Embeded Video:</h3>
+        <iframe width="1054" height="593" src="https://www.youtube.com/embed/e4Qut29yzLQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+</body>
+</html>

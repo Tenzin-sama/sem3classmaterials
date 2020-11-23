@@ -1,1 +1,21 @@
 filename -- description
+nov01CW1.html - using colspan and rowspan to merge table cells
+
+nov01CW2css.html - 1st lesson on css
+nov01CW2csssupplement.css - css file for nov01CW2css.html
+
+nov04CW1.html - using class and id for css. creating href link for specific id
+nov04CW1csssupplement.css - css file for nov04CW1.html
+
+nov04HW1.html - Assignment: a sample table for homework, uses css too
+nov04HW1css.css - css file for nov04HW1.html
+
+nov04HW2.html - Assignment: a sample table example as homework
+
+nov09CW1.html - a class on using anchor href links
+
+nov11CW1.html - was supposed to be a class on adding media files(img, audio and video) but did a revision class instead this day
+
+nov18CW1.html - adding images, audio and video
+
+nov23CW1.html - learning about division <div> tag. some css tags for those divisions as well

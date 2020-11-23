@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!-- learning about division <div> tag -->
+<!-- some css tags for those divisions as well -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Margin and Padding</title>
+    <style>
+        /* margin: space between current element and other elements outside it */
+        /* padding: space between current elements and other elemnts inside it */
+        h1{
+            color: white;
+            margin:5px;
+        }
+        #first{
+            background-color: blue;
+            height: 200px;
+            width: 300px;
+            float: left;
+            /* margin: top bottom left right */
+            margin: 5px 5px 5px 5px;
+            /* padding: 30px; */
+        }
+        #firstin{
+            background-color: orange;
+            height: 50%;
+            width: 100%;
+            float: left;
+            margin: 50px 0px;
+        }
+        #second{
+            background-color: red;
+            height: 200px;
+            width: 300px;
+            float: left;
+            /* margin: top&bottom left&right */
+            margin: 5px 5px;
+            box-shadow: black 5px 5px 0px;
+        }
+        #third{
+            background-color: purple;
+            height: 200px;
+            width: 300px;
+            float: left;
+            /* margin-side */
+            margin-top: 5px;
+            margin-bottom: 5px;
+            margin-left: 5px;
+            margin-right: 5px;
+            border: 5px outset yellow;
+        }
+
+    </style>
+</head>
+<body style="background-color: rgb(226, 181, 196);">
+    <div id="first">
+        <div id="firstin">
+            <h1>inside First</h1>
+        </div>
+    </div>
+    <div id="second">
+        <h1>Second</h1>
+    </div>
+    <div id="third">
+        <h1>Third</h2>
+    </div>
+    
+</body>
+</html>

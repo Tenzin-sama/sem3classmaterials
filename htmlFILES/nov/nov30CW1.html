@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!-- first class on Forms -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body style="background-color: burlywood;">
+    <div style="background-color: white; height:800px; width:700px; margin: auto; border-radius: 6px; padding: 15px;">
+        <form method="POST" action="action.php">
+            <h1>Form</h1>
+            <table border=0>
+                <!-- "entry boxes" -->
+                <tr>
+                    <td><lable>Email: </lable></td>
+                    <td><input name="email" type="email"/></td>
+                </tr>
+                <tr>
+                    <td><lable>Date of Birth: </lable></td>
+                    <td><input name="date" type="date"/></td>
+                </tr>
+                <tr>
+                    <td><lable>Phone: </lable></td>
+                    <td><input name="phone" type="number" max="9899999999" min=9800000000/></td>
+                </tr>
+                <tr>
+                    <td><lable>Username: </lable></td>
+                    <td><input name="username" type="text" placeholder="upto 8 characters" maxlength="8"/></td>
+                </tr>
+                <tr>
+                    <td><lable>Password: </lable></td>
+                    <td><input name="password" type="password"/></td>
+                </tr>
+                <!-- radio buttons -->
+                <tr>
+                    <td><lable>Gender: </lable></td>
+                    <td>
+                        <input name="gender" type="radio" value="male"/>
+                        <label>Male</label>
+                        <input name="gender" type="radio" value="female"/>
+                        <label>Female</label>
+                    </td>
+                </tr>
+                <!-- checkbox -->
+                <tr>
+                    <td><label>Hobbies:</label></td>
+                    <td>
+                        <input type="checkbox" name="hobbies[]" value="Music"/>
+                        <label>Music</label>
+                        <input type="checkbox" name="hobbies[]" value="Food"/>
+                        <label>Food</label>
+                        <input type="checkbox" name="hobbies[]" value="Travel"/>
+                        <label>Travel</label>
+                    </td>
+                </tr>
+                <!-- select -->
+                <tr>
+                    <td><label>Country:</label></td>
+                    <td>
+                        <select name="country">
+                            <option value="Nepal">Nepal</option>
+                            <option value="India">India</option>
+                            <option value="China">China</option>
+                        </select>
+                    </td>
+                </tr>
+                <!-- textbox -->
+                <tr>
+                    <td><label>Comments:</label></td>
+                    <td><textarea rows="10" cols="40"></textarea></td>
+                </tr>
+                <!-- range - rating -->
+                <tr>
+                    <td><label>Rating:</label></td>
+                    <td><input type="range" min="0" max="5"/></td>
+                </tr>
+                <!-- input file -->
+                <tr>
+                    <td><label>Upload Image:</label></td>
+                    <td><input type="file"/></td>
+                </tr>
+                <tr> <!--making buttons through button tag-->
+                    <td>
+                        <button type="submit">Register</button> <!--img can be added to buttons-->
+                        <button type="reset">Reset</button>
+                        <button type="button">Click</button>
+                    </td>
+                </tr>
+                <tr> <!--making buttons through input tag-->
+                    <td>
+                        <input type="submit" value="Register"/>
+                        <input type="reset" value="Reset">
+                        <input type="button" value="click"/>
+                    </td>
+                </tr>
+        </form>
+    </div>
+</body>
+</html>

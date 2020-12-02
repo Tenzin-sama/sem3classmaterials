@@ -4,17 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Forms</title>
+    <title>Nov 30, Forms</title>
 </head>
-<body style="background-color: burlywood;">
-    <div style="background-color: white; height:800px; width:700px; margin: auto; border-radius: 6px; padding: 15px;">
+<body style="background-color: rgb(231, 193, 88);">
+    <div style="background-color: white; height:700px; width:600px; margin: 70px auto; border-radius: 6px; padding: 15px;">
         <form method="POST" action="action.php">
-            <h1>Form</h1>
+            <h1>Forms</h1><hr><br>
             <table border=0>
                 <!-- "entry boxes" -->
                 <tr>
                     <td><lable>Email: </lable></td>
-                    <td><input name="email" type="email"/></td>
+                    <td><input name="email" type="email" autofocus/></td>
                 </tr>
                 <tr>
                     <td><lable>Date of Birth: </lable></td>
@@ -26,32 +26,32 @@
                 </tr>
                 <tr>
                     <td><lable>Username: </lable></td>
-                    <td><input name="username" type="text" placeholder="upto 8 characters" maxlength="8"/></td>
+                    <td><input name="username" type="text" placeholder="upto 8 characters" maxlength="8" required/></td>
                 </tr>
                 <tr>
                     <td><lable>Password: </lable></td>
-                    <td><input name="password" type="password"/></td>
+                    <td><input name="password" type="password" required/></td>
                 </tr>
                 <!-- radio buttons -->
                 <tr>
                     <td><lable>Gender: </lable></td>
                     <td>
-                        <input name="gender" type="radio" value="male"/>
-                        <label>Male</label>
-                        <input name="gender" type="radio" value="female"/>
-                        <label>Female</label>
+                        <input sele name="gender" type="radio" value="male" id="male"/>
+                        <label for="male">Male</label>
+                        <input name="gender" type="radio" value="female" id="female"/>
+                        <label for="female">Female</label>
                     </td>
                 </tr>
                 <!-- checkbox -->
                 <tr>
                     <td><label>Hobbies:</label></td>
                     <td>
-                        <input type="checkbox" name="hobbies[]" value="Music"/>
-                        <label>Music</label>
-                        <input type="checkbox" name="hobbies[]" value="Food"/>
-                        <label>Food</label>
-                        <input type="checkbox" name="hobbies[]" value="Travel"/>
-                        <label>Travel</label>
+                        <input id="music" type="checkbox" name="hobbies[]" value="Music"/>
+                        <label for="music">Music</label>
+                        <input id="food" type="checkbox" name="hobbies[]" value="Food"/>
+                        <label for="food">Food</label>
+                        <input id="travel" type="checkbox" name="hobbies[]" value="Travel"/>
+                        <label for="travel">Travel</label>
                     </td>
                 </tr>
                 <!-- select -->

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!-- searchbar -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search bar</title>
+    <style>
+        #test
+        {
+        background-color: blue;
+        height: 50px;
+        }
+
+        #test ul
+        {
+        list-style: none;
+        /*list-style-type: upper-roman;
+        list-style-image: url(arrow.png);
+        list-style-position: inside;*/
+        margin: 0;
+        padding: 0;
+        }
+
+        #test ul li
+        {
+        float: left;
+        margin: 10px 20px;
+        }
+
+        #test ul li a
+        {
+        color: #ffffff;
+        font-size: 20px;
+        font-weight: bold;
+        padding: 5px 10px;
+        text-decoration: none;
+        }
+
+        #test ul li ul
+        {
+        background-color: blue;
+        margin-left: -20px;
+        display: none;
+        position: absolute;
+        }
+
+        #test ul li ul li
+        {
+        float: none;
+        padding: 0;
+        }
+
+        #test ul li:hover ul
+        {
+        display: block;
+        }
+    </style>
+</head>
+<!--
+Accessibility
+-------------
+Table -> caption tag, summary attribute
+Media -> alt attribute, proper transcripts for audio & video
+Hyperlink(Anchor Tag)/ Form Elements -> tabindex, accesskey attributes
+-->
+<body>
+    <div id="test">
+        <ul>
+            <li><a href="#" tabindex="1" accesskey="h">Home</a></li>
+            <li><a href="#" tabindex="4" accesskey="a">About &rsaquo;</a>
+                <ul>
+                    <li><a href="#" tabindex="2" accesskey="c">Intro</a></li>
+                    <li><a href="#" tabindex="2" accesskey="c">History</a></li>
+                    <li><a href="#" tabindex="2" accesskey="c">Achievements</a></li>
+                </ul>
+            </li>
+            <li><a href="#" tabindex="2" accesskey="c">Courses</a></li>
+            <li><a href="#" tabindex="5" accesskey="g">Gallery &rsaquo;</a>
+                <ul>
+                    <li><a href="#" tabindex="2" accesskey="c">Images</a></li>
+                    <li><a href="#" tabindex="2" accesskey="c">Audio</a></li>
+                    <li><a href="#" tabindex="2" accesskey="c">Video</a></li>
+                </ul>
+            </li>
+            <li><a href="#" tabindex="3" accesskey="k">Contacts</a></li>
+        </ul>
+    </div>
+</body>
+</html>
